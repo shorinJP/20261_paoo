@@ -1,3 +1,68 @@
+//funções
+//arrow function
+const dobrar = n => 2 * n
+console.log(dobrar(6))
+const triplicar = (n) => {console.log("vamos calcular o triplo de " + n)
+    return 3 * n
+}
+console.log(triplicar(5))
+//escreva uma funcao quue decida se um valor é par ou n
+const numero_par = (numero) => numero % 2 === 0
+
+/* const hello = nome => console.log('oi' + nome)
+hello('Ana') */
+
+/* const hello = () => {console.log('oi')}
+hello() */
+
+
+/* const dobrar = function(n){
+    return 2 * n 
+}
+console.log(dobrar(2))
+console.log(dobrar(undefined))
+const triplicar = function(n = 5){
+    return 3 * n
+}
+console.log(triplicar(4))
+console.log(triplicar(undefined))
+
+const produto = function(a, b){
+    console.log(a * b)
+}
+produto(4, 3) */
+
+/* function somar (a, b){
+    return a + b
+}
+console.log(somar(2, 3)) */
+
+
+/* //functions e arrow functions
+function hello(){
+    console.log('oi')
+}
+hello()
+function hello(nome){
+    console.log('oi, ' + nome)
+}
+hello('Ana') */
+
+
+/* v1 = []
+console.log(v1length)
+v1[0] = 3.5
+console.log(v1.length)
+v1[10] = 'abc'
+console.log(v1.length)
+console.log(v1)
+for(let i = 0; 1 < v1.length; i ++){
+    console.log(v1[i])
+}
+ */
+
+
+
 /* //comparação por igualdade
 //Javascript == ou ===(usamos apenas esse)
 console.log(1 == 1)
