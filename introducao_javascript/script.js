@@ -1,13 +1,92 @@
+//closure
+function eAgora(){
+    let cont = 1
+    function f1(){
+        console.log(cont)
+    }
+    cont++
+    function f2(){
+        console.log(cont)
+    }
+    cont++
+    return{f1, f2}
+}
+let res = eAgora()
+res.f1()
+res.f2()
+
+/* function saudacoesFactory(saudacao, nome){
+    let outra 
+    return function(){
+        console.log(`${saudacao}, ${nome}`)
+    }
+}
+let olaJoao = saudacoesfactory('oi', 'João')
+let tchauJoao = saudacoesFactory('tchau', 'João')
+olaJoao()
+tchauJoao() */
+
+/* function f(){
+    let nome= 'João'
+    function g(){
+        console.log(nome)
+    }
+    g()
+}
+f() */
+
+/* let umaFuncao = function(){
+    console.log("Fui armazenada numa variavel")
+}
+umaFuncao()
+
+function f (funcao){
+    funcao()
+}
+
+f(umaFuncao)
+
+function g(){
+    function outraFuncao(){
+        console.log('fui criada pela g')
+        return () => console.log ("e agora?")
+    }
+    return outraFuncao 
+}
+
+f(g()()) */
+
+/* f(g())
+
+const gResult = g()
+gResult()
+g()()() */
+
+/* const valores = [1, 2, 3, 4]
+const soma = valores.reduce((ac, v) => ac = v)
+console.log(soma) */
+
+/* const nomes = ['Ana Maria', 'Antonia', 'Rodrigo','Alex', 'Cristina']
+const todosComecamComA = nomes.some(n => n.startsWith('A'))
+console.log(todosComecamComA) */
+/* const todosComecamComA = nomes.every(n => n.startsWith('A'))
+console.log(todosComecamComA) */
+/* //[A, A, R, A, C]
+const res = nomes.map(nome => nome.charAt(0))
+console.log(res) */
+/* const apenasComA = nomes.filter(n=> n.startsWith('A'))
+console.log(apenasComA) */
+
 //funções
 //arrow function
-const dobrar = n => 2 * n
+/* const dobrar = n => 2 * n
 console.log(dobrar(6))
 const triplicar = (n) => {console.log("vamos calcular o triplo de " + n)
     return 3 * n
 }
 console.log(triplicar(5))
 //escreva uma funcao quue decida se um valor é par ou n
-const numero_par = (numero) => numero % 2 === 0
+const numero_par = (numero) => numero % 2 === 0 */
 
 /* const hello = nome => console.log('oi' + nome)
 hello('Ana') */
