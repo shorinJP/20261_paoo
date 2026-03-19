@@ -1,4 +1,158 @@
-//objetos Javascript
+// const resultado = calculoDemorado(1000)
+// console.log(resultado)
+//console.log('script principal terminado...')
+
+// const calculoDemorado = (n) => {
+//     return new Promise((resolve, reject) => {
+//         if(n <= 0){
+//             reject('Apenas valores positivos')
+//         }
+//         else{
+//             let ac = 0
+//             for(let i = 1; i <= n; i++)
+//                 ac += i
+//             resolve(ac)
+//         }
+//     })
+// }
+//then/catch
+// const promiseResultante = calculoDemorado(1000)
+// promiseResultante
+// .then((res) => {console.log('Resultado: ' + res)})
+// .catch((err) => {console.log('Erro: ' + err)})
+
+/* //se n <= 0, então rejeitar dizendo "Apenas valores positivos"
+//caso contrário, fazer a conta e devolver o resultado
+
+const calculoRapidinho = (n) => {
+    return n > 0 ? Promise.resolve((n * (n + 1) / 2)) : Promise.reject('Apenas valores positivos')
+}
+calculoRapidinho(10)
+.then(res => {console.log(`Resultado: ${res}`)})
+.catch(err => console.log(`Erro: ${err}`))
+ */
+
+/* //promises
+function calculoRapidinho(numero){
+    return numero >= 0 ? Promise.resolve((numero + 1) * (numero / 2)) : Promise.reject("somento numeros positivos por favor")
+}
+const resultado = calculoRapidinho(100)
+resultado.then((res) => console.log(res))
+.catch((erro) => console.log(erro))
+
+const resultado2 = calculoRapidinho(-500)
+resultado2.then(res => console.log(res)).catch(erro => console.log(erro))
+ */
+
+/* //somar os valores 1, 2, 3 ...,n, sendo um valor passado como parametro
+//defini-la com o nome calculoDemorado
+const calculoDemorado = (n) => {
+    return new Promise((resolve, reject) => {
+        let res = 0
+        for(let i = 1; i <= n; i++) res += i
+        resolve(res)
+    })
+}
+
+const resultado = calculoDemorado(100)
+//then e catch
+resultado
+.then((res) => {console.log(res)})
+.catch(erro => console.log(`falhou ${erro}`))
+console.log('fim do script principal') */
+
+
+/* const fs = require('fs')
+const nomeArquivo = 'arquivo.txt'
+//função callback
+const exibirConteudo = (erro, conteudo) => {
+    console.log('A')
+    if(erro){
+        console.log(`Deu erro: ${erro}`)
+    }
+    else{
+        console.log(conteudo.toString())
+        const dobro = Number(conteudo.toString()) * 2
+        const finalizar = (erro) => {
+            console.log(erro ? "deu erro tentando salvar o dobro" : 'salvou o dobro com sucesso')
+            console.log("C")
+        }
+        fs.writeFileSync('dobro.txt', dobro.toString(), finalizar)
+        console.log("D")
+
+    }
+}
+
+fs.readFile(nomeArquivo, exibirConteudo)
+console.log('B') */
+
+/* //represente uma calculadora como objeto JS, ela sabe somar e subtrair dois valores
+//agende a execução da soma para daqui 5 segundos
+//agende a execução da subtração para daqui meio segundo
+//claro, exiba os valores no final
+//no formato: 2 + 3 = 5
+//1 - 1 = 0
+
+const calc = {
+    soma: (x, y) => x + y,
+    sub: (x, y) => x - y,
+  };
+  
+  setTimeout(() => {
+    console.log(`2 + 3 = ${calc.soma(2, 3)}`);
+  }, 5000);
+  
+  setTimeout(() => {
+    console.log(`1 - 1 = ${calc.sub(1, 1)}`);
+  }, 500); */
+
+
+/* function demorada(tempo){
+    const atualMaisTempo = new Date().getTime() + tempo
+    while(new Date().getTime() <= atualMaisTempo);
+    const d = 8 + 4
+    console.log(`Tempo: ${tempo}`)
+    return d
+}
+setTimeout(() => {demorada(2000)}, 2000)
+setTimeout(() => {demorada(1000)}, 1000) */
+
+/* setTimeout(() => {
+    console.log("executada pela setTimeout")
+}, 0)
+
+const a = new Date() .getTime() + 5000
+while(new Date() .getTime() <= a); 
+console.log('Terminando o script principal') */
+
+/* const a = 7 + 1 * 4
+const b = 8 * 1
+
+setTimeout(() => {
+    const d = demorada()
+    console.log(`d: ${d}`)
+}, 1000)
+
+const e = a + b
+console.log(`e: ${e}`) */
+
+/* const a = 7 + 6
+const b = 7 + 1
+
+const d = demorada()
+
+const e = 2 + b + a 
+console.log(`e: ${e}`) */
+
+/* const a = 2 + 7
+const b = 6 + 5
+console.log(a + b) */
+
+/* console.log('eu primeiro')
+console.log('agora eu...')
+console.log("sempre vou ser a última...:(") */
+
+/* //objetos Javascript
 let calculadora = {
     somar: (a,b) => a + b,
     subtrair: function(a,b){return a - b}
@@ -7,7 +161,7 @@ let calculadora = {
 let res1 = calcularoda.somar(1, 2)
 console.log(res1)
 console.log(calculadora.subtrair(2, 1))
-console.log(calculadora['subtrair'](2, 1))
+console.log(calculadora['subtrair'](2, 1)) */
 
 /* //uma concessionario tem cnpj e um endereço. Ela possui alguns carros em estoque. cada carro tem
 //marca, modelo e ano de fabricação
@@ -187,7 +341,7 @@ hello('Ana') */
 
 
 /* v1 = []
-console.log(v1length)
+console.log(v1.length)
 v1[0] = 3.5
 console.log(v1.length)
 v1[10] = 'abc'
